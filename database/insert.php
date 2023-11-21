@@ -7,11 +7,11 @@ if(isset($_POST['Add'])){
  $name=$_POST['name'];
  $contact=$_POST['contact'];
  $city=$_POST['city'];
-
+ 
 $insert="INSERT INTO `student`(`name`, `contact no`, `city`) VALUES ('$name','$contact','$city');";
 $result=mysqli_query($connection , $insert) or die("failed to insert query.");
 if($result){
-   echo "<script>alert('Student`s Details added.')</script>";
+   echo "<script>alert('Student`s Details added.')</script>;";
 }
 else{
     echo "<script>alert('Sorry, Failed to insert this record.')</script>";
