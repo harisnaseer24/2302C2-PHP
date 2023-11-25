@@ -10,8 +10,6 @@ if($_GET['id']){
 
 $delete="DELETE FROM `student` WHERE id= '$id';";
 
-
-
 $result=mysqli_query($connection , $delete) or die("failed to insert query.");
 if($result){
    echo "<script>alert('Student`s Details Deleted.')</script>;";
