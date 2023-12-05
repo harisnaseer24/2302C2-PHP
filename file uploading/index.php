@@ -1,12 +1,13 @@
 <?php 
 include "../include/header.php";
 require "../include/connection.php";
+
 if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']=="POST"){
 echo $name=$_POST['name'];
 echo $price=$_POST['price'];
-echo"<pre>";
-print_r($_FILES['image']);
-echo"</pre>";
+// echo"<pre>";
+// print_r($_FILES['image']);
+// echo"</pre>";
 if($_FILES['image']['error'] ==4){
     echo "
     <script>alert('Image not found')</script>";
@@ -17,32 +18,28 @@ $tmpname=$_FILES['image']['tmp_name'];
 $size=$_FILES['image']['size'];
 
 $validExtensions=["png","jpg","jpeg"];
-$extension= explode(".",$imgname);
-
-echo $extension= strtolower(end($extension));
+// abc.jpg
+$extension= explode(".",$imgname);// ["abc", "jpg"]
 // print_r($extension);
-if($size > 10000000){
+$extension= strtolower(end($extension));//jpg
+
+if($size > 1000000){
     echo "<script>alert('File too large')</script>";
 }elseif(!in_array($extension, $validExtensions)){
     echo "<script>alert('File type not supported')</script>";
 }else{
- echo $newimgname=uniqid().".".$extension;
+$newimgname=uniqid().".".$extension;//4545gh45rt454242.jpg
 $insert="INSERT INTO `mobiles`( `name`, `price`, `image`) VALUES ('$name','$price','$newimgname')";
 $result=mysqli_query($connection, $insert) or die("failed");
 if($result){
     move_uploaded_file($tmpname, "images/".$newimgname);
     echo "<script>alert('Product registered succesfully')</script>";
-
-}else{
-    echo "<script>alert('Failed to register this product.')</script>";
 }
 }
 }
 }
 ?>
 <body>
-    
-
 <div class="container">
         <h1 class="text-center display-3 fw-semibold">PRODUCT REGISTERATION</h1>
 

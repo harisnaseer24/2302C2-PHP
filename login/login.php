@@ -35,6 +35,7 @@ else{
 <form action="" method="post" class="form-group">
 <input type="email" name="email" id="" class="form-control my-2" placeholder="Enter email">
 <input type="password" name="password" id="" class="form-control my-2" placeholder="Enter a strong password">
+<a href="forgetpass.php">Forget your password?</a>
 <input type="submit" name="signin" id="" class="form-control btn btn-dark my-2">
 </form>
 </div>

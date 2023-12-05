@@ -42,18 +42,13 @@ while($row=mysqli_fetch_assoc($result)){
     
 }
 ?>
-
-
-
 </tbody>
 </table>
-
 <?php
 }
 else{
     echo "<script>alert('record not found')</script>";
 }
-
 }else{
 echo "<script>alert('Failed to execute query')</script>";
 }
