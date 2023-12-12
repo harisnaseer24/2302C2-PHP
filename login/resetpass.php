@@ -43,8 +43,8 @@ else{
 }
 }
 else{
-     echo "<script>alert('Pehle account bana kr aao.')
-       window.location.href='signup.php';</script>;";
+     echo "<script>alert('Invalid token.')
+       window.location.href='login.php';</script>;";
 }
 }
 ?>
