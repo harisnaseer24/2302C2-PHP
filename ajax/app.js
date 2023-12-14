@@ -38,7 +38,7 @@ success:function(data){
 }
 })
 })
-
+//trash
 $("tbody").on("click",".del",function(e){
 userid=$(this).attr("data-id");
     $.ajax({

@@ -14,20 +14,7 @@
  ?>
     <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
-        <h1 class="display-3 text-center text-primary">Insert User Details</h1>
-    <form action="" class="form-group" id="form">
-    <label for="uname">Name</label>
-    <input type="hidden" class="form-control" id="id">
-    <input type="text" class="form-control" id="uname">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="email">
-    <label for="pass">Password</label>
-    <input type="password" class="form-control" id="pass">
-    <input type="submit" class="btn btn-primary" id="btn">
-    </form>
-    </div>
-    <div class="col-md-6">
+
         <table class="table">
             <thead class="table-primary">
             <h1 class="display-3 text-center text-primary">User Details</h1>
@@ -35,7 +22,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>Edit</th>
+                <th>RESTORE</th>
                 <th>DELETE</th>
             </thead>
             <tbody id="tablebody">
@@ -44,7 +31,6 @@
         </table>
     </div>
     </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./app.js"></script>
+    <script src="./lib.js"></script>
