@@ -1,4 +1,4 @@
-<footer class="bg-dark text-light text-center">
+<footer class="bg-body-tertiary text-center">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -69,7 +69,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2020 Copyright:
-    <a class="text-body text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-body" href="https://mdbootstrap.com/">HNCLOTHES.com</a>
   </div>
   <!-- Copyright -->
 </footer>
