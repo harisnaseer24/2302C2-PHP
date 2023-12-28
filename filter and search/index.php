@@ -65,6 +65,7 @@ $cat_id=$_GET['cat_id'];
     $getClothesByCategory_run=mysqli_query($connection, $getClothesByCategory) or die("failed");
     if(mysqli_num_rows($getClothesByCategory_run) > 0){
     while($cloth=mysqli_fetch_assoc($getClothesByCategory_run)){
+        $id=$cloth['id'];
         echo'
         <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card" >
@@ -73,9 +74,10 @@ $cat_id=$_GET['cat_id'];
  
     <h5 class="card-title">'.$cloth['name'].'  <span class="badge text-bg-danger">'.$cloth['category_name'].'</span></h5>
     <p class="card-text">'.$cloth['description'].'</p>
+    <p class="card-text">'.$cloth['price'].'</p>
    
 
-    <a href="#" class="btn btn-outline-danger">'.$cloth['price'].'PKR</a>
+    <a href="productdetails.php?p_id='.$id.'" class="btn btn-outline-danger">Add to cart</a>
   </div>
 </div>
         </div>
@@ -88,7 +90,8 @@ $cat_id=$_GET['cat_id'];
     $getAllClothes="SELECT * FROM `clothes` as c inner join `category` as cat on c.category_id=cat.category_id ORDER by c.id DESC;";
     $getAllClothes_run=mysqli_query($connection, $getAllClothes) or die("failed");
     if(mysqli_num_rows($getAllClothes_run) > 0){
-    while($cloth=mysqli_fetch_assoc($getAllClothes_run)){
+        while($cloth=mysqli_fetch_assoc($getAllClothes_run)){
+        $id=$cloth['id'];
         echo'
         <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card" >
@@ -98,8 +101,10 @@ $cat_id=$_GET['cat_id'];
     <h5 class="card-title">'.$cloth['name'].'  <span class="badge text-bg-danger">'.$cloth['category_name'].'</span></h5>
     <p class="card-text">'.$cloth['description'].'</p>
    
+    <p class="card-text">'.$cloth['price'].'</p>
+   
 
-    <a href="#" class="btn btn-outline-danger">'.$cloth['price'].'PKR</a>
+    <a href="productdetails.php?p_id='.$id.'" class="btn btn-outline-danger">Add to cart</a>
   </div>
 </div>
         </div>

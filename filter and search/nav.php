@@ -17,6 +17,9 @@
           <li class="nav-item">
             <a class="nav-link" href="add.php">Add new outfit</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i> My cart</a>
+          </li>
         
         </ul>
         <form class="d-flex mt-3" role="search" action="search.php" method="POST">
@@ -24,6 +27,7 @@
           <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
-    </div>
-  </div>
+    </div> </div>
+  <!--<i class="fa-solid fa-x"></i> -->
+  <!-- <i class="fa-solid fa-cart-shopping"></i> -->
 </nav>

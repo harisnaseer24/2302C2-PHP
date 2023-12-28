@@ -38,7 +38,10 @@ $query;
     <p class="card-text">'.$cloth['description'].'</p>
    
 
-    <a href="#" class="btn btn-outline-danger">'.$cloth['price'].'PKR</a>
+    <p class="card-text">'.$cloth['price'].'</p>
+   
+
+    <a href="productdetails.php?p_id='.$id.'" class="btn btn-outline-danger">Add to cart</a>
   </div>
 </div>
         </div>
