@@ -17,6 +17,7 @@ include("./nav.php");
     </tr>
   </thead>
 <?php 
+ $subTotal=0;
 $getCartItems="SELECT * FROM `cart` as c inner join `clothes` as cl on c.p_id=cl.id inner join `category` as cat on cl.category_id=cat.category_id
     ORDER by c.cart_id DESC;";
     $getCartItems_run=mysqli_query($connection, $getCartItems) or die("failed");
@@ -25,7 +26,7 @@ $getCartItems="SELECT * FROM `cart` as c inner join `clothes` as cl on c.p_id=cl
         <tbody>
         <?php
         $i=1;
-        $subTotal=0;
+       
         while($cartItem=mysqli_fetch_assoc($getCartItems_run)){
         $id=$cartItem['id'];
         $subTotal+=$cartItem['total'];
@@ -37,7 +38,7 @@ $getCartItems="SELECT * FROM `cart` as c inner join `clothes` as cl on c.p_id=cl
         <td><?=$cartItem['price']?></td>
         <td><?=$cartItem['qty']?></td>
         <td><?=$cartItem['total']?></td>
-        <td><i class="fa-solid fa-x"></i></td> 
+        <td><a href="removeCartItem.php?item_id=<?=$cartItem['cart_id']?>"><i class="fa-solid fa-x"></i></a></td> 
       </tr>
       <?php 
       $i++;
